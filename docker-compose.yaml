@@ -1,4 +1,5 @@
 version: '3'
+
 services:
   www:
     image: tokumeikoi/lcrp
@@ -13,6 +14,7 @@ services:
       - '80:80'
       - '443:443'
     restart: always
+
   mysql:
     image: mysql:5.7.29
     volumes:
@@ -21,3 +23,11 @@ services:
     environment: 
       MYSQL_ROOT_PASSWORD: v2boardisbest
       MYSQL_DATABASE: v2board
+
+  phpmyadmin:
+    image: phpmyadmin
+    ports:
+      - "8080:80"
+    environment:
+      PMA_HOST: mysql
+      PMA_ARBITRARY: 1
