@@ -1,4 +1,4 @@
 [submodule "www"]
 	path = www
-	url = https://github.com/danialslm/v2board.git
+	url = https://github.com/v2board/v2board.git
 	branch = master
